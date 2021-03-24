@@ -1,0 +1,129 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    
+    font-family: 'Kumbh Sans','sans-serif';
+    font-size: 14px;
+    font-weight: 400;
+    background : radial-gradient(500px 500px,hsl(240, 73%, 65%),hsl(273, 75%, 66%))
+}
+
+article{
+    background-color: aliceblue;
+    margin : 150px 20px 100px;
+    padding : 110px 20px 50px;
+    border-radius: 30px;
+    position: relative;
+    box-shadow:0 15px 30px  rgb(73, 73, 73) ;
+    height:500px;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+}
+.img1 {
+    position: absolute;
+    top: -10px;
+    left:50%;
+    transform: translate(-55%,-50%);
+    background:url("./images/bg-pattern-mobile.svg") 25px 100px / contain no-repeat ;
+}
+.img2 , .imgBoite {
+    display : none;
+}
+h1{
+    text-align : center;
+    line-height:4rem;
+    font-size : 2rem;
+    color:hsl(238, 29%, 16%)
+    
+}
+a {
+    text-decoration: none;
+    line-height: 3rem;
+    color:hsl(237, 12%, 33%);
+    display: flex;
+    justify-content: space-between;
+}
+
+span{
+    content:"";
+    display: inline-block;
+    width:10px;
+    height:7px;
+    margin-top: 19px;
+    background:url(./images/icon-arrow-down.svg) center center / 10px 7px no-repeat;
+    
+}
+
+p {
+    
+    color:hsl(240, 6%, 50%);
+    font-size:0.8rem;
+    margin-bottom: 20px;
+    max-width: 85%;
+    transition : all .5s;
+}
+
+@media only screen and (min-width:720px){
+
+
+
+article{
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    padding: 50px 10px 30px;
+    overflow: hidden;
+    
+    
+}
+.forBox{
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    position: relative;
+    
+}
+.img1 {
+    display:none; 
+
+}
+.container {
+    max-width: 500px;
+    margin-left:325px;
+    padding: 30px 5px 20px;
+}
+h1 {
+    text-align: left;
+}
+.img2{
+    display:block;
+    position:absolute;
+    height:270px;
+    top : 65px;
+    left:-60px;
+}
+.imgBoite{
+    display:block;
+    position:absolute;
+    left:-130px;
+    top:150px;
+    z-index: 5;
+
+}
+a:hover {
+    color : hsl(14, 88%, 65%);
+    transition: .3s;
+    
+}
+.imgBoite {
+    transition : transform .5s ;
+}
+}
+.imgBoite:hover {
+    transform: translate(0,-20px);
+}
